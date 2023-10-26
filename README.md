@@ -13,7 +13,7 @@ Euler modular function approximation note
 ## NumericTable
 [Table(digit:300)](https://github.com/tk-yoshimura/EulerQApproximation/tree/main/results/euler_q_n32.csv)  
 
-## NonZero Root
+## NonZero Root (\phi(q)=1)
 q = -0.  
 679334369989992724165789016984783579936441256412012010234918  
 431856742847762651599470526827588108924759171702586718086099  
