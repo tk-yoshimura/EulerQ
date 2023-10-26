@@ -2,7 +2,7 @@
 
 Euler modular function approximation note
 
-## Define
+## Definition
 ![euler q define](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_define.svg)  
 
 ## Graph
