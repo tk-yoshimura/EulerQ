@@ -3,19 +3,14 @@
 Euler modular function approximation note
 
 ## Define
-
 ![euler q define](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_define.svg)  
 
 ## Graph
-
 ![euler q plot](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_plot.svg)  
-
 ![euler q logplot](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_logplot.svg)  
-
 ![euler q vplot](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_vplot.svg)  
 
 ## NumericTable
-
 [table](https://github.com/tk-yoshimura/EulerQApproximation/tree/main/results/euler_q_n32.csv)  
 
 ## NonZero Root
