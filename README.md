@@ -11,7 +11,7 @@ Euler modular function approximation note
 ![euler q vplot](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_vplot.svg)  
 
 ## NumericTable
-[table](https://github.com/tk-yoshimura/EulerQApproximation/tree/main/results/euler_q_n32.csv)  
+[Table(digit=300)](https://github.com/tk-yoshimura/EulerQApproximation/tree/main/results/euler_q_n32.csv)  
 
 ## NonZero Root
 q = -0.  
