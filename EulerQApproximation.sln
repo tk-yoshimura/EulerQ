@@ -5,7 +5,9 @@ VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EulerQApproximation", "EulerQApproximation\EulerQApproximation.csproj", "{E0ACB051-502B-48BE-B9F6-7779094122FD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EulerQPade", "EulerQPade\EulerQPade.csproj", "{3C6A22A4-F12E-4DA5-9A9D-E0667DAAD45B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EulerQPade", "EulerQPade\EulerQPade.csproj", "{3C6A22A4-F12E-4DA5-9A9D-E0667DAAD45B}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "EulerQVis", "EulerQVis\EulerQVis.pyproj", "{845DC65F-BF44-4FD6-9E29-7B6E814C7AD0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,8 @@ Global
 		{3C6A22A4-F12E-4DA5-9A9D-E0667DAAD45B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C6A22A4-F12E-4DA5-9A9D-E0667DAAD45B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C6A22A4-F12E-4DA5-9A9D-E0667DAAD45B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{845DC65F-BF44-4FD6-9E29-7B6E814C7AD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{845DC65F-BF44-4FD6-9E29-7B6E814C7AD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -2,7 +2,7 @@
 
 namespace EulerQApproximation {
     internal class Program {
-        static void Main() {
+        static void Main_() {
             using StreamWriter sw = new("../../../../results/euler_q_n32.csv");
             sw.WriteLine("x,y:=euler_q(x),lny:=ln(y),v:=lny*(1-x^2)");
 

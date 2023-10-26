@@ -7,7 +7,7 @@ namespace EulerQPade {
         static void Main() {
             List<(MultiPrecision<Pow2.N32> x, MultiPrecision<Pow2.N32> y)> expected_positives = new(), expected_negatives = new();
 
-            using StreamReader sr = new("../../../../results/euler_q_n32.csv");
+            using StreamReader sr = new("../../../../results_disused/euler_q_n32_65536.csv");
 
             sr.ReadLine();
             while (!sr.EndOfStream) {
@@ -29,9 +29,9 @@ namespace EulerQPade {
 
             expected_negatives.Reverse();
 
-            using StreamWriter sw_result = new("../../../../results_disused/euler_q_e32_pade.csv");
+            using StreamWriter sw_result = new("../../../../results_disused/euler_q_e32_pade_3.csv");
 
-            for (double h = 0.5; h >= 1 / 32d; h /= 2) {
+            for (double h = 0.5; h >= 1 / 16d; h /= 2) {
                 for (double x0 = 0; x0 + h <= 1; x0 += h) {
                     foreach (bool positive in new[] { true, false }) {
 
@@ -39,70 +39,66 @@ namespace EulerQPade {
                             ? expected_positives.Where(item => item.x >= x0 && item.x <= x0 + h).ToList()
                             : expected_negatives.Where(item => item.x >= x0 && item.x <= x0 + h).ToList();
 
-                        foreach(bool reverse in new[] { false, true }){
-                            if (reverse && x0 == 0) {
-                                continue;
-                            }
+                        bool reverse = x0 != 0;
 
-                            Vector<Pow2.N32> xs = !reverse
-                                ? expecteds_range.Select(item => item.x - x0).ToArray()
-                                : expecteds_range.Select(item => (x0 + h) - item.x).ToArray();
+                        Vector<Pow2.N32> xs = !reverse
+                            ? expecteds_range.Select(item => item.x - x0).ToArray()
+                            : expecteds_range.Select(item => (x0 + h) - item.x).ToArray();
 
-                            Vector<Pow2.N32> ys = expecteds_range.Select(item => item.y).ToArray();
+                        Vector<Pow2.N32> ys = expecteds_range.Select(item => item.y).ToArray();
 
-                            for (int m = 4; m <= 40; m++) {
-                                PadeFitter<Pow2.N32> pade = new(xs, ys, m, m, intercept: x0 == 0 ? 0 : null);
+                        for (int m = 4; m <= 40; m++) {
+                            PadeFitter<Pow2.N32> pade = new(xs, ys, m, m, intercept: x0 == 0 ? 0 : null);
 
-                                Vector<Pow2.N32> param = pade.ExecuteFitting();
-                                Vector<Pow2.N32> errs = pade.Error(param);
+                            Vector<Pow2.N32> param = pade.ExecuteFitting();
+                            Vector<Pow2.N32> errs = pade.Error(param);
 
-                                MultiPrecision<Pow2.N32> max_err = errs.Select(e => MultiPrecision<Pow2.N32>.Abs(e.val)).Max();
+                            MultiPrecision<Pow2.N32> max_err = errs.Select(e => MultiPrecision<Pow2.N32>.Abs(e.val)).Max();
 
-                                Console.WriteLine($"m={m},n={m}");
-                                Console.WriteLine($"{max_err:e20}");
+                            Console.WriteLine($"m={m},n={m}");
+                            Console.WriteLine($"{max_err:e20}");
 
-                                if (max_err < 2e-33) {
-                                    if (positive) {
-                                        if (!reverse) {
-                                            sw_result.WriteLine($"x0={x0}");
-                                            sw_result.WriteLine($"x=[{x0},{x0 + h}]");
-                                        }
-                                        else { 
-                                            sw_result.WriteLine($"x0={x0 + h}");
-                                            sw_result.WriteLine($"x=[{x0 + h},{x0}]");
-                                        }
+                            if (max_err < 2e-33) {
+                                if (positive) {
+                                    if (!reverse) {
+                                        sw_result.WriteLine($"x0={x0}");
+                                        sw_result.WriteLine($"x=[{x0},{x0 + h}]");
                                     }
-                                    else {
-                                        if (!reverse) {
-                                            sw_result.WriteLine($"x0={-x0}");
-                                            sw_result.WriteLine($"x=[{-x0},{-x0 - h}]");
-                                        }
-                                        else { 
-                                            sw_result.WriteLine($"x0={-x0 - h}");
-                                            sw_result.WriteLine($"x=[{-x0 - h},{-x0}]");
-                                        }
+                                    else { 
+                                        sw_result.WriteLine($"x0={x0 + h}");
+                                        sw_result.WriteLine($"x=[{x0 + h},{x0}]");
                                     }
-
-                                    sw_result.WriteLine($"m={m},n={m}");
-                                    sw_result.WriteLine("numer");
-                                    foreach (var (_, val) in param[..m]) {
-                                        sw_result.WriteLine(val);
-                                    }
-                                    sw_result.WriteLine("denom");
-                                    foreach (var (_, val) in param[m..]) {
-                                        sw_result.WriteLine(val);
-                                    }
-                                    sw_result.WriteLine("hexcode");
-                                    for (int i = 0; i < m; i++) {
-                                        sw_result.WriteLine($"({ToFP128(param[i])}, {ToFP128(param[i + m])}),");
-                                    }
-
-                                    sw_result.WriteLine("relative err");
-                                    sw_result.WriteLine($"{max_err:e20}");
-                                    sw_result.Flush();
-
-                                    break;
                                 }
+                                else {
+                                    if (!reverse) {
+                                        sw_result.WriteLine($"x0={-x0}");
+                                        sw_result.WriteLine($"x=[{-x0},{-x0 - h}]");
+                                    }
+                                    else { 
+                                        sw_result.WriteLine($"x0={-x0 - h}");
+                                        sw_result.WriteLine($"x=[{-x0 - h},{-x0}]");
+                                    }
+                                }
+
+                                sw_result.WriteLine($"m={m},n={m}");
+                                sw_result.WriteLine("numer");
+                                foreach (var (_, val) in param[..m]) {
+                                    sw_result.WriteLine(val);
+                                }
+                                sw_result.WriteLine("denom");
+                                foreach (var (_, val) in param[m..]) {
+                                    sw_result.WriteLine(val);
+                                }
+                                sw_result.WriteLine("hexcode");
+                                for (int i = 0; i < m; i++) {
+                                    sw_result.WriteLine($"({ToFP128(param[i])}, {ToFP128(param[i + m])}),");
+                                }
+
+                                sw_result.WriteLine("relative err");
+                                sw_result.WriteLine($"{max_err:e20}");
+                                sw_result.Flush();
+
+                                break;
                             }
                         }
                     }
