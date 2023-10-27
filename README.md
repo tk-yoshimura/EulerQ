@@ -30,5 +30,3 @@ q = -0.
 ## Approximation
 ![euler q approx](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_approx.svg)  
 ![euler r vplot](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_rplot.svg)  
-
-![euler r vplot](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_rplot.svg)  
