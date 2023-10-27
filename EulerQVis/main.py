@@ -6,7 +6,7 @@ data = pd.read_csv("../results/euler_q_n32.csv", encoding="utf-8")
 
 x, y, lny, v = data["x"], data["y:=euler_q(x)"], data["lny:=ln(y)"], data["v:=lny*(1-x^2)"]
 
-
+# plot regular graph
 plt.clf()
 
 plt.figure(figsize=(8, 6))
@@ -22,7 +22,7 @@ plt.grid()
 
 plt.savefig("../figures/euler_q_plot.svg")
 
-
+# plot log graph
 plt.clf()
 
 plt.figure(figsize=(8, 6))
@@ -41,7 +41,7 @@ plt.grid()
 plt.savefig("../figures/euler_q_logplot.svg")
 
 
-
+# plot v plot
 plt.clf()
 
 plt.figure(figsize=(8, 6))
@@ -70,3 +70,26 @@ plt.text(float(root), -0.25, root + "...", ha="left")
 plt.grid()
 
 plt.savefig("../figures/euler_q_vplot.svg")
+
+
+# plot r plot
+plt.clf()
+
+plt.figure(figsize=(8, 6))
+
+r = (v + x) / (x * x)
+
+plt.plot(x, r)
+plt.xlim([-1, 1])
+plt.ylim([-2.5, -1.25])
+plt.yticks(np.arange(-20, -9) / 8)
+
+plt.xlabel("$q$")
+plt.ylabel("$( \log ((q; q)_\infty ) \cdot (1-q^2) + q) / q^2 $")
+
+plt.scatter([0], [-1.5])
+plt.text(0, -1.5, " exact: -3/2", va="bottom")
+
+plt.grid()
+
+plt.savefig("../figures/euler_q_rplot.svg")

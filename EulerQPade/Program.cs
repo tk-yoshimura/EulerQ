@@ -19,19 +19,21 @@ namespace EulerQPade {
                 string[] line_split = line.Split(",");
                 MultiPrecision<Pow2.N32> x = line_split[0], y = line_split[3];
 
+                MultiPrecision<Pow2.N32> v = (x != 0) ? ((y + x) / (x * x)) : -1.5;
+
                 if (x >= 0) {
-                    expected_positives.Add((x, y));
+                    expected_positives.Add((x, v));
                 }
                 if (x <= 0) {
-                    expected_negatives.Add((-x, y));
+                    expected_negatives.Add((-x, v));
                 }
             }
 
             expected_negatives.Reverse();
 
-            using StreamWriter sw_result = new("../../../../results_disused/euler_q_e32_pade_3.csv");
+            using StreamWriter sw_result = new("../../../../results_disused/euler_q_e32_pade_4.csv");
 
-            for (double h = 0.5; h >= 1 / 16d; h /= 2) {
+            for (double h = 0.5; h >= 1 / 64d; h /= 2) {
                 for (double x0 = 0; x0 + h <= 1; x0 += h) {
                     foreach (bool positive in new[] { true, false }) {
 
@@ -39,7 +41,7 @@ namespace EulerQPade {
                             ? expected_positives.Where(item => item.x >= x0 && item.x <= x0 + h).ToList()
                             : expected_negatives.Where(item => item.x >= x0 && item.x <= x0 + h).ToList();
 
-                        bool reverse = x0 != 0;
+                        bool reverse = true;
 
                         Vector<Pow2.N32> xs = !reverse
                             ? expecteds_range.Select(item => item.x - x0).ToArray()
@@ -47,18 +49,18 @@ namespace EulerQPade {
 
                         Vector<Pow2.N32> ys = expecteds_range.Select(item => item.y).ToArray();
 
-                        for (int m = 4; m <= 40; m++) {
-                            PadeFitter<Pow2.N32> pade = new(xs, ys, m, m, intercept: x0 == 0 ? 0 : null);
+                        for (int m = 4; m <= 48; m++) {
+                            PadeFitter<Pow2.N32> pade = new(xs, ys, m, m);
 
                             Vector<Pow2.N32> param = pade.ExecuteFitting();
                             Vector<Pow2.N32> errs = pade.Error(param);
 
-                            MultiPrecision<Pow2.N32> max_err = errs.Select(e => MultiPrecision<Pow2.N32>.Abs(e.val)).Max();
+                            MultiPrecision<Pow2.N32> max_err = (errs / ys).Select(e => MultiPrecision<Pow2.N32>.Abs(e.val)).Max();
 
                             Console.WriteLine($"m={m},n={m}");
                             Console.WriteLine($"{max_err:e20}");
 
-                            if (max_err < 2e-33) {
+                            if (max_err < 2e-32) {
                                 if (positive) {
                                     if (!reverse) {
                                         sw_result.WriteLine($"x0={x0}");
