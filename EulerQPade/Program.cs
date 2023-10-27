@@ -31,17 +31,16 @@ namespace EulerQPade {
 
             expected_negatives.Reverse();
 
-            using StreamWriter sw_result = new("../../../../results_disused/euler_q_e32_pade_4.csv");
+            const bool reverse = true;
 
-            for (double h = 0.5; h >= 1 / 64d; h /= 2) {
-                for (double x0 = 0; x0 + h <= 1; x0 += h) {
+            for (int exp = 8; exp >= 4; exp--) {
+                using StreamWriter sw_result = new($"../../../../results_disused/euler_q_e32_pade_exp{exp}.csv");
+
+                foreach ((double x0, double h) in EnumRange(exp)) {
                     foreach (bool positive in new[] { true, false }) {
-
                         List<(MultiPrecision<Pow2.N32> x, MultiPrecision<Pow2.N32> y)> expecteds_range = positive
                             ? expected_positives.Where(item => item.x >= x0 && item.x <= x0 + h).ToList()
                             : expected_negatives.Where(item => item.x >= x0 && item.x <= x0 + h).ToList();
-
-                        bool reverse = true;
 
                         Vector<Pow2.N32> xs = !reverse
                             ? expecteds_range.Select(item => item.x - x0).ToArray()
@@ -53,7 +52,7 @@ namespace EulerQPade {
                             throw new ArithmeticException("pade include negative x!");
                         }
 
-                        for (int m = 4; m <= 48; m++) {
+                        for (int m = 4; m <= 54; m++) {
                             PadeFitter<Pow2.N32> pade = new(xs, ys, m, m);
 
                             Vector<Pow2.N32> param = pade.ExecuteFitting();
@@ -70,7 +69,7 @@ namespace EulerQPade {
                                         sw_result.WriteLine($"x0={x0}");
                                         sw_result.WriteLine($"x=[{x0},{x0 + h}]");
                                     }
-                                    else { 
+                                    else {
                                         sw_result.WriteLine($"x0={x0 + h}");
                                         sw_result.WriteLine($"x=[{x0 + h},{x0}]");
                                     }
@@ -80,7 +79,7 @@ namespace EulerQPade {
                                         sw_result.WriteLine($"x0={-x0}");
                                         sw_result.WriteLine($"x=[{-x0},{-x0 - h}]");
                                     }
-                                    else { 
+                                    else {
                                         sw_result.WriteLine($"x0={-x0 - h}");
                                         sw_result.WriteLine($"x=[{-x0 - h},{-x0}]");
                                     }
@@ -113,6 +112,21 @@ namespace EulerQPade {
 
             Console.WriteLine("END");
             Console.Read();
+        }
+
+        static IEnumerable<(double x0, double h)> EnumRange(int exp) {
+            if (exp < 4) {
+                throw new ArgumentOutOfRangeException(nameof(exp));
+            }
+
+            yield return (1 - double.ScaleB(1, -exp), double.ScaleB(1, -exp));
+            yield return (1 - double.ScaleB(1, -exp + 2), 3 * double.ScaleB(1, -exp));
+
+            exp -= 2;
+            while (exp >= 1) {
+                yield return (1 - double.ScaleB(1, -exp + 1), double.ScaleB(1, -exp));
+                exp--;
+            }
         }
 
         public static string ToFP128(MultiPrecision<Pow2.N32> x) {
