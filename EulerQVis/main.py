@@ -80,6 +80,7 @@ plt.figure(figsize=(8, 6))
 r = (v + x) / (x * x)
 
 plt.plot(x, r)
+plt.plot(x, r * 1.025, color="gray", linestyle="dashed")
 plt.xlim([-1, 1])
 plt.ylim([-2.5, -1.25])
 plt.yticks(np.arange(-20, -9) / 8)
