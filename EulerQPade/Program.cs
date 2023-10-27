@@ -49,6 +49,10 @@ namespace EulerQPade {
 
                         Vector<Pow2.N32> ys = expecteds_range.Select(item => item.y).ToArray();
 
+                        if (xs.Any(x => x.val < 0)) {
+                            throw new ArithmeticException("pade include negative x!");
+                        }
+
                         for (int m = 4; m <= 48; m++) {
                             PadeFitter<Pow2.N32> pade = new(xs, ys, m, m);
 
