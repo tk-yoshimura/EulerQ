@@ -3,8 +3,8 @@ using MultiPrecisionRootFinding;
 
 namespace EulerQApproximation {
     internal class RootFind {
-        static void Main() {
-            static MultiPrecision<Pow2.N64> f(MultiPrecision<Pow2.N64> x) { 
+        static void Main_() {
+            static MultiPrecision<Pow2.N64> f(MultiPrecision<Pow2.N64> x) {
                 MultiPrecision<Pow2.N64> y = EulerQ<Pow2.N64>.Value(x);
                 MultiPrecision<Pow2.N64> lny = MultiPrecision<Pow2.N64>.Log(y);
                 MultiPrecision<Pow2.N64> v = lny * (1 - x * x);

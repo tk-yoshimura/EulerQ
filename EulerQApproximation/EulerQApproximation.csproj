@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <PackageReference Include="TYoshimura.MultiPrecision" Version="6.2.1" />
+    <PackageReference Include="TYoshimura.MultiPrecision.Differentiate" Version="1.1.0" />
     <PackageReference Include="TYoshimura.MultiPrecision.RootFinding" Version="1.2.0" />
   </ItemGroup>
 

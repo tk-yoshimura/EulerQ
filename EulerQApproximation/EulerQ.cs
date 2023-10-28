@@ -18,7 +18,6 @@ namespace EulerQApproximation {
                 w *= q;
 
                 if (wm1 == 1) {
-                    Console.WriteLine(k);
                     return y;
                 }
             }
