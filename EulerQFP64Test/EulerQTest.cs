@@ -32,6 +32,7 @@ namespace EulerQFP64Test {
                 Console.WriteLine($"{x},{expected},{actual}");
 
                 Assert.AreEqual(expected, actual, expected * 3e-15 + 1e-15, $"\n{x}\n{expected}\n{actual}");
+                Assert.AreEqual(expected, actual, expected * 2e-13, $"\n{x}\n{expected}\n{actual}");
             }
         }
 
