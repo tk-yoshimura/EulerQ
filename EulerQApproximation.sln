@@ -9,6 +9,16 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EulerQPade", "EulerQPade\Eu
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "EulerQVis", "EulerQVis\EulerQVis.pyproj", "{845DC65F-BF44-4FD6-9E29-7B6E814C7AD0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EulerQFP64", "EulerQFP64\EulerQFP64.csproj", "{9D243D99-D5E5-439F-AB6A-C3BDF3F089CF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E0ACB051-502B-48BE-B9F6-7779094122FD} = {E0ACB051-502B-48BE-B9F6-7779094122FD}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EulerQFP64Test", "EulerQFP64Test\EulerQFP64Test.csproj", "{A5B93515-CC4C-4D29-9ABC-90C34BB153C9}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9D243D99-D5E5-439F-AB6A-C3BDF3F089CF} = {9D243D99-D5E5-439F-AB6A-C3BDF3F089CF}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +35,14 @@ Global
 		{3C6A22A4-F12E-4DA5-9A9D-E0667DAAD45B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{845DC65F-BF44-4FD6-9E29-7B6E814C7AD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{845DC65F-BF44-4FD6-9E29-7B6E814C7AD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D243D99-D5E5-439F-AB6A-C3BDF3F089CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D243D99-D5E5-439F-AB6A-C3BDF3F089CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D243D99-D5E5-439F-AB6A-C3BDF3F089CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D243D99-D5E5-439F-AB6A-C3BDF3F089CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5B93515-CC4C-4D29-9ABC-90C34BB153C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5B93515-CC4C-4D29-9ABC-90C34BB153C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5B93515-CC4C-4D29-9ABC-90C34BB153C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5B93515-CC4C-4D29-9ABC-90C34BB153C9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

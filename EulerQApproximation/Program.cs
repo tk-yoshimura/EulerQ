@@ -14,7 +14,7 @@ namespace EulerQApproximation {
                 if (x == -1) {
                     v = -MultiPrecision<Pow2.N32>.Square(MultiPrecision<Pow2.N32>.PI) / 12;
                 }
-                else if (x == 1) { 
+                else if (x == 1) {
                     v = -MultiPrecision<Pow2.N32>.Square(MultiPrecision<Pow2.N32>.PI) / 3;
                 }
 

@@ -1,12 +1,7 @@
 ﻿using MultiPrecision;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EulerQApproximation {
-    public static class EulerQ<N> where N: struct, IConstant {
+    public static class EulerQ<N> where N : struct, IConstant {
         public static MultiPrecision<N> Value(MultiPrecision<N> q, long maxiter = int.MaxValue) {
             if (!(MultiPrecision<N>.Abs(q) <= 1)) {
                 return MultiPrecision<N>.NaN;
