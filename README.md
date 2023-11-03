@@ -52,6 +52,9 @@ q_max = -0.
 094873998958489011641170140913194320878622304051921800210335  
 035857471976383959541758533602002933138606004469363730348519...
 
+## Series
+![euler q vplot series](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_vplot_series.svg)  
+
 ## Approximation
 ![euler q approx](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_approx.svg)  
 ![euler r vplot](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_rplot.svg)  
