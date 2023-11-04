@@ -28,50 +28,50 @@ y_phase[y_abs == 0] = 0
 v_phase[v_abs == 0] = 0
 
 # # Plot abs euler_q
-# ax = make_polar()
-
-# ctf = ax.pcolormesh(theta, norm, y_abs, cmap=cm.jet, vmin=0, vmax=5, shading="gouraud", rasterized=True)
-# colb = plt.colorbar(ctf, pad = 0.05, orientation="vertical")
-# colb.set_label("$|\log(q; q_\infty)|$")
-# colb.ax.set_ylim([0, 5])
-# colb.ax.set_yticks(np.arange(0, 11) / 2)
-# ax.grid(color="gray", alpha=0.4, linestyle="--")
- 
-# plt.savefig("../figures/euler_q_complex_abs_plot.svg", bbox_inches="tight")
-
-# # Plot phase euler_q
-# ax = make_polar()
-
-# ctf = ax.pcolormesh(theta, norm, y_phase, cmap=cm.hsv, vmin=-np.pi, vmax=np.pi, shading="gouraud", rasterized=True)
-# colb = plt.colorbar(ctf, pad = 0.05, orientation="vertical")
-# colb.set_label(r"$\arg \log(q; q_\infty)$")
-# colb.ax.set_ylim([-np.pi, np.pi])
-# colb.ax.set_yticks(np.arange(-4, 5) * (np.pi / 4), ["$-\pi$", "$-3\pi/4$", "$-\pi/2$", "$-\pi/4$", "$0$", "$\pi/4$", "$\pi/2$", "$3\pi/4$", "$\pi$"])
-# ax.grid(color="gray", alpha=0.4, linestyle="--")
-
-# plt.savefig("../figures/euler_q_complex_phase_plot.svg", bbox_inches="tight")
-
-
-# Plot abs euler_q v
 ax = make_polar()
 
-ctf = ax.pcolormesh(theta, norm, v_abs, cmap=cm.jet, vmin=0, vmax=5, shading="gouraud", rasterized=True)
+ctf = ax.pcolormesh(theta, norm, y_abs, cmap=cm.jet, vmin=0, vmax=5, shading="gouraud", rasterized=True)
 colb = plt.colorbar(ctf, pad = 0.05, orientation="vertical")
-colb.set_label("$|\log(q; q_\infty) (1-q^2)|$")
+colb.set_label("$|(q; q_\infty)|$")
 colb.ax.set_ylim([0, 5])
 colb.ax.set_yticks(np.arange(0, 11) / 2)
 ax.grid(color="gray", alpha=0.4, linestyle="--")
+ 
+plt.savefig("../figures/euler_q_complex_abs_plot.svg", bbox_inches="tight")
 
-plt.savefig("../figures/euler_q_complex_abs_vplot.svg", bbox_inches="tight")
-
-# Plot phase euler_q v
+# Plot phase euler_q
 ax = make_polar()
 
-ctf = ax.pcolormesh(theta, norm, v_phase, cmap=cm.hsv, vmin=-np.pi, vmax=np.pi, shading="gouraud", rasterized=True)
+ctf = ax.pcolormesh(theta, norm, y_phase, cmap=cm.hsv, vmin=-np.pi, vmax=np.pi, shading="gouraud", rasterized=True)
 colb = plt.colorbar(ctf, pad = 0.05, orientation="vertical")
-colb.set_label(r"$\arg ( \log(q; q_\infty) (1-q^2) )$")
+colb.set_label(r"$\arg (q; q_\infty)$")
 colb.ax.set_ylim([-np.pi, np.pi])
 colb.ax.set_yticks(np.arange(-4, 5) * (np.pi / 4), ["$-\pi$", "$-3\pi/4$", "$-\pi/2$", "$-\pi/4$", "$0$", "$\pi/4$", "$\pi/2$", "$3\pi/4$", "$\pi$"])
 ax.grid(color="gray", alpha=0.4, linestyle="--")
 
-plt.savefig("../figures/euler_q_complex_phase_vplot.svg", bbox_inches="tight")
+plt.savefig("../figures/euler_q_complex_phase_plot.svg", bbox_inches="tight")
+
+
+# Plot abs euler_q v
+# ax = make_polar()
+
+# ctf = ax.pcolormesh(theta, norm, v_abs, cmap=cm.jet, vmin=0, vmax=5, shading="gouraud", rasterized=True)
+# colb = plt.colorbar(ctf, pad = 0.05, orientation="vertical")
+# colb.set_label("$|\log(q; q_\infty) (1-q^2)|$")
+# colb.ax.set_ylim([0, 5])
+# colb.ax.set_yticks(np.arange(0, 11) / 2)
+# ax.grid(color="gray", alpha=0.4, linestyle="--")
+
+# plt.savefig("../figures/euler_q_complex_abs_vplot.svg", bbox_inches="tight")
+
+# # Plot phase euler_q v
+# ax = make_polar()
+
+# ctf = ax.pcolormesh(theta, norm, v_phase, cmap=cm.hsv, vmin=-np.pi, vmax=np.pi, shading="gouraud", rasterized=True)
+# colb = plt.colorbar(ctf, pad = 0.05, orientation="vertical")
+# colb.set_label(r"$\arg ( \log(q; q_\infty) (1-q^2) )$")
+# colb.ax.set_ylim([-np.pi, np.pi])
+# colb.ax.set_yticks(np.arange(-4, 5) * (np.pi / 4), ["$-\pi$", "$-3\pi/4$", "$-\pi/2$", "$-\pi/4$", "$0$", "$\pi/4$", "$\pi/2$", "$3\pi/4$", "$\pi$"])
+# ax.grid(color="gray", alpha=0.4, linestyle="--")
+
+# plt.savefig("../figures/euler_q_complex_phase_vplot.svg", bbox_inches="tight")
