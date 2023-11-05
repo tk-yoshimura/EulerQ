@@ -61,12 +61,12 @@ q_max = -0.
 
 ## Complex
 ### ![euler q define](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_define.svg)  
-|Abs|Phase|
+|Abs|Arg|
 |---|---|
 |![euler q plot complex abs](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_complex_abs_plot.svg)|![euler q plot complex phase](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_complex_phase_plot.svg)|
 
 ### ![euler q v define](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_v_define.svg)  
-|Abs|Phase|
+|Abs|Arg|
 |---|---|
 |![euler q vplot complex abs](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_complex_abs_vplot.svg)|![euler q vplot complex phase](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_complex_phase_vplot.svg)|
 
