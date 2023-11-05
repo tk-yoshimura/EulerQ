@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>845dc65f-bf44-4fd6-9e29-7b6e814c7ad0</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>vis_complex_edge.py</StartupFile>
+    <StartupFile>vis_complex_polar.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>

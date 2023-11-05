@@ -1,8 +1,9 @@
-# EulerQApproximation
+# EulerQ
 
-Euler modular function approximation note
+Euler modular function note
 
 ## Definition
+The Euler Q function is represented by the following infinite product, also denoted by the Q-Pochhammer symbol.  
 ![euler q define](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_define.svg)  
 
 ## Graph
@@ -65,6 +66,9 @@ q_max = -0.
 |Abs|Phase|
 |---|---|
 |![euler q vplot complex abs](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_complex_abs_vplot.svg)|![euler q vplot complex phase](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_complex_phase_vplot.svg)|
+
+In neighborhood of |q|=1, the zero points are placed in a regular pattern.  
+![euler q vplot complex abs edge](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_complex_abs_vplot_edge.svg)
 
 ## Approximation
 ![euler q approx](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_approx.svg)  
