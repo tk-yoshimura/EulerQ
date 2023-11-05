@@ -7,11 +7,11 @@ The Euler Q function is represented by the following infinite product, also deno
 ![euler q define](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_define.svg)  
 
 ## Graph
-### Numerical results on the real axis.
+Numerical results on the real axis.  
 ![euler q plot](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_plot.svg)  
 ![euler q logplot](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_logplot.svg)  
 
-### Variable transformation yields a bounded curve suitable for numerical evaluation.
+Variable transformation yields a bounded curve suitable for numerical evaluation.  
 ![euler q vplot](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_vplot.svg)  
 
 ## NumericTable
