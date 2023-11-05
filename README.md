@@ -72,7 +72,11 @@ q_max = -0.
 
 ### Edge Pattern
 In neighborhood of |*q*|=1, the zero points are placed in a regular pattern.  
+![euler q define](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_define.svg)   
 ![euler q plot complex abs edge](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_complex_abs_plot_edge.svg)  
+Perhaps the zero point exists at the position where the phase is the product of all rational numbers and &pi;.  
+
+![euler q v define](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_v_define.svg)  
 ![euler q vplot complex abs edge](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_complex_abs_vplot_edge.svg)  
 
 ## Approximation
