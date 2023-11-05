@@ -57,12 +57,12 @@ q_max = -0.
 ![euler q vplot series](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_vplot_series.svg)  
 
 ## Complex
-![euler q define](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_define.svg)  
+### ![euler q define](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_define.svg)  
 |Abs|Phase|
 |---|---|
 |![euler q plot complex abs](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_complex_abs_plot.svg)|![euler q plot complex phase](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_complex_phase_plot.svg)|
 
-![euler q v define](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_v_define.svg)  
+### ![euler q v define](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_v_define.svg)  
 |Abs|Phase|
 |---|---|
 |![euler q vplot complex abs](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_complex_abs_vplot.svg)|![euler q vplot complex phase](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_complex_phase_vplot.svg)|
