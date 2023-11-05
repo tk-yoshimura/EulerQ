@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>845dc65f-bf44-4fd6-9e29-7b6e814c7ad0</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>vis_complex.py</StartupFile>
+    <StartupFile>vis_complex_edge.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,9 +21,10 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="main.py" />
+    <Compile Include="vis_complex_edge.py" />
+    <Compile Include="vis_real.py" />
     <Compile Include="plot_polar_util.py" />
-    <Compile Include="vis_complex.py" />
+    <Compile Include="vis_complex_polar.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
