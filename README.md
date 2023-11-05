@@ -70,8 +70,10 @@ q_max = -0.
 |---|---|
 |![euler q vplot complex abs](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_complex_abs_vplot.svg)|![euler q vplot complex phase](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_complex_phase_vplot.svg)|
 
+### Edge Pattern
 In neighborhood of |*q*|=1, the zero points are placed in a regular pattern.  
-![euler q vplot complex abs edge](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_complex_abs_vplot_edge.svg)
+![euler q plot complex abs edge](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_complex_abs_plot_edge.svg)  
+![euler q vplot complex abs edge](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_complex_abs_vplot_edge.svg)  
 
 ## Approximation
 ![euler q approx](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_approx.svg)  
