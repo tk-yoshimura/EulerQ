@@ -57,26 +57,29 @@ q_max = -0.
 035857471976383959541758533602002933138606004469363730348519...
 
 ## Series
+The series is shown in the following equation using the divisor function \sigma;<sub>1</sub>(n).
+
+![euler q log series](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_log_series.svg)  
 ![euler q vplot series](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_vplot_series.svg)  
+![euler q vplot series expand](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_vplot_series_expand.svg)  
 
 ## Complex
-### ![euler q define](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_define.svg)  
+### ![euler q raw](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_raw.svg)  
 |Abs|Arg|
 |---|---|
 |![euler q plot complex abs](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_complex_abs_plot.svg)|![euler q plot complex phase](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_complex_phase_plot.svg)|
 
-### ![euler q v define](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_v_define.svg)  
+### ![euler q log](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_log.svg)  
 |Abs|Arg|
 |---|---|
 |![euler q vplot complex abs](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_complex_abs_vplot.svg)|![euler q vplot complex phase](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_complex_phase_vplot.svg)|
 
-### Edge Pattern
-In neighborhood of |*q*|=1, the zero points are placed in a regular pattern.  
+### Edge Pattern ![euler q raw](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_raw.svg)  
+In the neighborhood of q=1, the true singularities are arranged in a regular pattern based on rational numbers. 
 ![euler q define](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_define.svg)   
 ![euler q plot complex abs edge](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_complex_abs_plot_edge.svg)  
-Perhaps the zero point exists at the position where the phase is the product of all rational numbers and &pi;.  
 
-### Edge Pattern (Variable transformation)
+### Edge Pattern ![euler q log](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_log.svg)  
 ![euler q v define](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_v_define.svg)  
 ![euler q vplot complex abs edge](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_complex_abs_vplot_edge.svg)  
 
