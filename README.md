@@ -89,7 +89,7 @@ This series does not converge at |*q*|=1, but is shown below from the limit.
 |![euler q vplot complex abs](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_complex_abs_vplot.svg)|![euler q vplot complex phase](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_complex_phase_vplot.svg)|
 
 ### Edge Pattern ![euler q raw](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_raw.svg)  
-In |*q*|=1, essential singularities are arranged in a regular pattern based on rational numbers. 
+In |*q*|=1, essential singularities are arranged in a regular pattern based on Dedekind eta function. 
 ![euler q plot complex abs edge](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_complex_abs_plot_edge.svg)  
 
 ### Edge Pattern ![euler q log](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_log.svg)  
