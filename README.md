@@ -69,9 +69,12 @@ The series is shown in the following equation using the divisor function *&sigma
 ![euler q vplot series](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_vplot_series.svg)  
 ![euler q vplot series expand](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_vplot_series_expand.svg)  
 
+### Limit
 This series does not converge at |*q*|=1, but is shown below from the limit.  
 ![euler q zeta neg](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_zeta_neg.svg)  
 ![euler q zeta pos](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_zeta_pos.svg)  
+
+### Terms and Approximations
 ![euler q series approxpoly](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_series_approxpoly.svg)  
 
 ## Complex
