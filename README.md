@@ -6,6 +6,8 @@ Euler modular function note
 The Euler Q function is represented by the following infinite product, also denoted by the Q-Pochhammer symbol.  
 ![euler q define](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_define.svg)  
 
+[Wikipedia](https://en.wikipedia.org/wiki/Euler_function)
+
 ## Graph
 Numerical results on the real axis.  
 ![euler q plot](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_plot.svg)  
