@@ -59,11 +59,15 @@ q_max = -0.
 035857471976383959541758533602002933138606004469363730348519...
 
 ## Series
-The series is shown in the following equation using the divisor function &sigma;<sub>1</sub>(n). [OEIS A000203](https://oeis.org/A000203)
+The series is shown in the following equation using the divisor function &sigma;<sub>1</sub>(*n*). [OEIS A000203](https://oeis.org/A000203)
 
 ![euler q log series](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_log_series.svg)  
 ![euler q vplot series](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_vplot_series.svg)  
 ![euler q vplot series expand](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_vplot_series_expand.svg)  
+
+This series does not converge at |*q*|=1, but is shown below from the limit.  
+![euler q zeta neg](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_zeta_neg.svg)  
+![euler q zeta pos](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_zeta_pos.svg)  
 
 ## Complex
 ### ![euler q raw](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_raw.svg)  
@@ -77,7 +81,7 @@ The series is shown in the following equation using the divisor function &sigma;
 |![euler q vplot complex abs](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_complex_abs_vplot.svg)|![euler q vplot complex phase](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_complex_phase_vplot.svg)|
 
 ### Edge Pattern ![euler q raw](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_raw.svg)  
-In the neighborhood of q=1, essential singularities are arranged in a regular pattern based on rational numbers. 
+In |*q*|=1, essential singularities are arranged in a regular pattern based on rational numbers. 
 ![euler q plot complex abs edge](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_complex_abs_plot_edge.svg)  
 
 ### Edge Pattern ![euler q log](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_log.svg)  

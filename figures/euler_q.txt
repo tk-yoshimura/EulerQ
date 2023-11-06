@@ -34,3 +34,13 @@
 + \frac{69 }{160 } q^{32}
 + O(q^{33})
 \end{eqnarray*}
+
+\begin{eqnarray*}
+  -\frac{\pi^2}{3} &=& -2 \zeta(2) \\ 
+                   &=& - 1 - \frac{3}{2} - \sum_{n=3}^{\infty} \left( \frac{\sigma_1(n)}{n} - \frac{\sigma_1(n-2)}{n-2} \right)
+\end{eqnarray*}
+
+\begin{eqnarray*}
+  -\frac{\pi^2}{12} &=& -\frac{\zeta(2)}{2} \\ 
+                   &=& 1 - \frac{3}{2} - \sum_{n=3}^{\infty} (-1)^n \left( \frac{\sigma_1(n)}{n} - \frac{\sigma_1(n-2)}{n-2} \right)
+\end{eqnarray*}
