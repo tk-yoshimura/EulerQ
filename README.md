@@ -76,11 +76,9 @@ The series is shown in the following equation using the divisor function \sigma;
 
 ### Edge Pattern ![euler q raw](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_raw.svg)  
 In the neighborhood of q=1, the true singularities are arranged in a regular pattern based on rational numbers. 
-![euler q define](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_define.svg)   
 ![euler q plot complex abs edge](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_complex_abs_plot_edge.svg)  
 
 ### Edge Pattern ![euler q log](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_log.svg)  
-![euler q v define](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_v_define.svg)  
 ![euler q vplot complex abs edge](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_complex_abs_vplot_edge.svg)  
 
 ## Approximation
