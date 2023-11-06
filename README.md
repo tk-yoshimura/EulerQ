@@ -63,7 +63,7 @@ q_max = -0.
 [OEIS A143440](https://oeis.org/A143440)  
 
 ## Series
-The series is shown in the following equation using the divisor function &sigma;<sub>1</sub>(*n*). [OEIS A000203](https://oeis.org/A000203)
+The series is shown in the following equation using the divisor function *&sigma;*<sub>1</sub>(*n*). [OEIS A000203](https://oeis.org/A000203)
 
 ![euler q log series](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_log_series.svg)  
 ![euler q vplot series](https://github.com/tk-yoshimura/EulerQApproximation/blob/main/figures/euler_q_vplot_series.svg)  
