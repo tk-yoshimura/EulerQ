@@ -2,7 +2,7 @@
 
 namespace EulerQApproximation {
     public static class EulerQ<N> where N : struct, IConstant {
-        public static MultiPrecision<N> Value(MultiPrecision<N> q, long maxiter = int.MaxValue) {
+        public static MultiPrecision<N> Value(MultiPrecision<N> q) {
             if (!(MultiPrecision<N>.Abs(q) <= 1)) {
                 return MultiPrecision<N>.NaN;
             }
@@ -11,7 +11,7 @@ namespace EulerQApproximation {
             }
 
             MultiPrecision<N> y = 1, w = q;
-            for (long k = 1; k <= maxiter; k++) {
+            while (true) {
                 MultiPrecision<N> wm1 = 1 - w;
 
                 y *= wm1;
@@ -21,8 +21,6 @@ namespace EulerQApproximation {
                     return y;
                 }
             }
-
-            throw new ArithmeticException("Not convergence EulerQ");
         }
     }
 }

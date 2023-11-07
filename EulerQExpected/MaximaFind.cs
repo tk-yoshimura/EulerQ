@@ -5,7 +5,7 @@ using MultiPresicionDifferentiate;
 
 namespace EulerQApproximation {
     internal class MaximaFind {
-        static void Main() {
+        static void Main_() {
             static MultiPrecision<Pow2.N64> f(MultiPrecision<Pow2.N64> x) {
                 MultiPrecision<Pow2.N64> y = EulerQ<Pow2.N64>.Value(x);
 
