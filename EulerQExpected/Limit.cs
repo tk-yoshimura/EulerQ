@@ -7,7 +7,7 @@ namespace EulerQExpected {
             using StreamWriter sw = new("../../../../results/euler_q_n8_limit.csv");
             sw.WriteLine("x,y:=euler_q(x),lny:=ln(y),v:=lny*(1-x^2),extrapolation_limit(v),extrapolation_error(v)");
 
-            SteffiensenIterativeKAutoAccelerator<Pow2.N8> limit_neg = new(), limit_pos = new();
+            SteffensenIterativeKAutoAccelerator<Pow2.N8> limit_neg = new(), limit_pos = new();
 
             for (MultiPrecision<Pow2.N8> dx = 1 / 64d; dx.Exponent >= -25; dx /= 2) {
                 MultiPrecision<Pow2.N8> x = -1 + dx;
