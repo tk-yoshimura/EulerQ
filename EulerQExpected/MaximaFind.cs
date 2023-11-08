@@ -3,7 +3,7 @@ using MultiPrecisionDifferentiate;
 using MultiPrecisionRootFinding;
 using MultiPresicionDifferentiate;
 
-namespace EulerQApproximation {
+namespace EulerQExpected {
     internal class MaximaFind {
         static void Main_() {
             static MultiPrecision<Pow2.N64> f(MultiPrecision<Pow2.N64> x) {

@@ -1,7 +1,7 @@
 ﻿using MultiPrecision;
 using MultiPrecisionRootFinding;
 
-namespace EulerQApproximation {
+namespace EulerQExpected {
     internal class RootFind {
         static void Main_() {
             static MultiPrecision<Pow2.N64> f(MultiPrecision<Pow2.N64> x) {

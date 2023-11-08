@@ -1,6 +1,6 @@
 ﻿using MultiPrecision;
 
-namespace EulerQApproximation {
+namespace EulerQExpected {
     internal class Program {
         static void Main_() {
             using StreamWriter sw = new("../../../../results/euler_q_n32.csv");

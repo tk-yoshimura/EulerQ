@@ -1,6 +1,6 @@
 ﻿using MultiPrecision;
 
-namespace EulerQApproximation {
+namespace EulerQExpected {
     public static class EulerQ<N> where N : struct, IConstant {
         public static MultiPrecision<N> Value(MultiPrecision<N> q) {
             if (!(MultiPrecision<N>.Abs(q) <= 1)) {
