@@ -7,9 +7,9 @@ namespace EulerQExpected {
             using StreamWriter sw = new("../../../../results/euler_q_n8_limit.csv");
             sw.WriteLine("x,y:=euler_q(x),lny:=ln(y),v:=lny*(1-x^2),extrapolation_limit(v),extrapolation_error(v)");
 
-            SteffensenIterativeKAutoAccelerator<Pow2.N8> limit_neg = new(), limit_pos = new();
+            WynnEpsilonAccelerator<Pow2.N8> limit_neg = new(), limit_pos = new();
 
-            for (MultiPrecision<Pow2.N8> dx = 1 / 64d; dx.Exponent >= -25; dx /= 2) {
+            for (MultiPrecision<Pow2.N8> dx = 1 / 32d; dx.Exponent >= -25; dx /= 2) {
                 MultiPrecision<Pow2.N8> x = -1 + dx;
                 MultiPrecision<Pow2.N8> y = EulerQ<Pow2.N8>.Value(x);
                 MultiPrecision<Pow2.N8> lny = MultiPrecision<Pow2.N8>.Log(y);
@@ -17,7 +17,7 @@ namespace EulerQExpected {
 
                 limit_neg.Append(v);
 
-                if (dx > 1 / 256d) {
+                if (MultiPrecision<Pow2.N8>.IsNaN(limit_neg.Error)) {
                     continue;
                 }
 
@@ -26,7 +26,7 @@ namespace EulerQExpected {
                 sw.Flush();
             }
 
-            for (MultiPrecision<Pow2.N8> dx = 1 / 64d; dx.Exponent >= -25; dx /= 2) {
+            for (MultiPrecision<Pow2.N8> dx = 1 / 32d; dx.Exponent >= -25; dx /= 2) {
                 MultiPrecision<Pow2.N8> x = 1 - dx;
                 MultiPrecision<Pow2.N8> y = EulerQ<Pow2.N8>.Value(x);
                 MultiPrecision<Pow2.N8> lny = MultiPrecision<Pow2.N8>.Log(y);
@@ -34,7 +34,7 @@ namespace EulerQExpected {
 
                 limit_pos.Append(v);
 
-                if (dx > 1 / 256d) {
+                if (MultiPrecision<Pow2.N8>.IsNaN(limit_pos.Error)) {
                     continue;
                 }
 
