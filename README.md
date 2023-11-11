@@ -18,6 +18,7 @@ Variable transformation yields a bounded curve suitable for numerical evaluation
 
 ## NumericTable
 [Table(digit:300)](https://github.com/tk-yoshimura/EulerQApproximation/tree/main/results/euler_q_n32.csv)  
+[Limit Table(digit:75)](https://github.com/tk-yoshimura/EulerQApproximation/tree/main/results/euler_q_n8_limit.csv)  
 
 ## NonZero LogRoot (&Phi;(q)=1)
 q = -0.  
