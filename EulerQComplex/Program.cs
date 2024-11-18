@@ -21,7 +21,7 @@ namespace EulerQComplex {
             for (MultiPrecision<Pow2.N4> theta = 0; theta < 2; theta += 1 / 2048d) {
                 Complex<Pow2.N4>[] vs = new Complex<Pow2.N4>[norms.Count];
 
-                Complex<Pow2.N4> p = (MultiPrecision<Pow2.N4>.CosPI(theta), MultiPrecision<Pow2.N4>.SinPI(theta));
+                Complex<Pow2.N4> p = (MultiPrecision<Pow2.N4>.CosPi(theta), MultiPrecision<Pow2.N4>.SinPi(theta));
 
                 int log_k = 0;
 
@@ -41,7 +41,7 @@ namespace EulerQComplex {
                         int min_log_dk = 0;
                         MultiPrecision<Pow2.N4> min_abs = MultiPrecision<Pow2.N4>.PositiveInfinity;
                         for (int log_dk = log_k - 16; log_dk <= log_k + 16; log_dk++) {
-                            Complex<Pow2.N4> v = (lny + (0, 2 * log_dk * MultiPrecision<Pow2.N4>.PI)) * (1 - q * q);
+                            Complex<Pow2.N4> v = (lny + (0, 2 * log_dk * MultiPrecision<Pow2.N4>.Pi)) * (1 - q * q);
                             MultiPrecision<Pow2.N4> abs = (assume_v - v).Magnitude;
 
                             if (abs < min_abs) {
@@ -54,7 +54,7 @@ namespace EulerQComplex {
                     }
 
                     {
-                        Complex<Pow2.N4> v = (lny + (0, 2 * log_k * MultiPrecision<Pow2.N4>.PI)) * (1 - q * q);
+                        Complex<Pow2.N4> v = (lny + (0, 2 * log_k * MultiPrecision<Pow2.N4>.Pi)) * (1 - q * q);
 
                         sw.WriteLine($"{theta},{norm},{y},{v}");
                         Console.WriteLine($"{theta}\n{norm}\n{v:e20}\n{log_k}");

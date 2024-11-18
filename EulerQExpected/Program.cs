@@ -12,10 +12,10 @@ namespace EulerQExpected {
                 MultiPrecision<Pow2.N32> v = lny * (1 - x * x);
 
                 if (x == -1) {
-                    v = -MultiPrecision<Pow2.N32>.Square(MultiPrecision<Pow2.N32>.PI) / 12;
+                    v = -MultiPrecision<Pow2.N32>.Square(MultiPrecision<Pow2.N32>.Pi) / 12;
                 }
                 else if (x == 1) {
-                    v = -MultiPrecision<Pow2.N32>.Square(MultiPrecision<Pow2.N32>.PI) / 3;
+                    v = -MultiPrecision<Pow2.N32>.Square(MultiPrecision<Pow2.N32>.Pi) / 3;
                 }
 
                 sw.WriteLine($"{x},{y},{lny},{v}");
